@@ -116,7 +116,7 @@ IngresoPaciente = async (req, res) => {
     }
 };
 
-LiberarConsultas = async (req, res) => {
+LiberarConsultas = async (req = null, res = null) => {
     const db = await MongoConnect();
 
     const condicionConsultasOcupadas = {
@@ -133,9 +133,9 @@ LiberarConsultas = async (req, res) => {
     
         console.log(buscarConsultasOcupadas);
 
-        res.status(201).send(buscarConsultasOcupadas); // Updated response on success
+        res ? res.status(201).send(buscarConsultasOcupadas) : 1; // Updated response on success
     }else{
-        res.status(201).send({message: "No hay consultas para ser liberadas"}); // Updated response on success
+        res ? res.status(201).send({message: "No hay consultas para ser liberadas"}) : 1; // Updated response on success
     }
 }
 

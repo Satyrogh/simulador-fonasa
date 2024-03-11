@@ -1,0 +1,23 @@
+En esta aplicación de fonasa, 
+los cambios son monitoreados por consola mediante node y estos actualizan la base de datos para realizar la atención y procesamiento de los pacientes.
+
+Requisitos:
+NodeJS Express:
+    * express
+    * body-parser
+    * path
+    * browser-sync
+    * moment
+    * mongodb
+Docker con docker-compose (Para instalar mongo)
+
+Ejecutar:
+npm run start
+
+Notas y observaciones:
+Usar . como separador decimal
+El nombre es el identificador principal de la persona y su historia clínica, evite ingresar duplicados.
+El paciente en espera es considerado el próximo que entrará a una consulta de su unidad correspondiente (Sólo hay un paciente en espera por unidad.)
+La prioridad de quién es el paciente que pasa a la sala de espera es determinado cuando la unidad que le corresponde se libera, es ahí cuando se verifica entre los pendientes quién es el próximo en espera según su prioridad y orden de llegada.
+Cuando una consulta se libera y hay un paciente de su unidad en espera, este es ingresado como "Atendido" y la consulta pasa a "Ocupada".
+Para activar la funcionalidad "Optimizar atención" se debe cambiar la variable optimizarAtencion de ./src/models/monitor_bd.js a true y volver a ejecutar el proyecto.
