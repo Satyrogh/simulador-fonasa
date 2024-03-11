@@ -150,10 +150,10 @@ const OptimizarAtencion = async (db) => {
             },
             { 
                 $sort: { 
-                    "riesgo": -1, // Sort 'riesgo' in descending order, highest risk first
-                    "ordenEdad": 1, // Then sort by 'tipoOrden' to prioritize 'niño' and 'anciano'
-                    "prioridad": 1, // Assuming 'prioridad' is a numeric field where lower means higher priority
-                    "historia_clinica.fecha_hora": 1, // Sort by arrival, earliest first
+                    "riesgo": -1,
+                    "ordenEdad": 1,
+                    "prioridad": 1,
+                    "historia_clinica.fecha_hora": 1,
                     "ordenEdadJoven": 1
                 } 
             },
