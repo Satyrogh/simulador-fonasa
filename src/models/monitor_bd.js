@@ -4,7 +4,7 @@ const moment = require('moment');
 
 let lastChecked = moment().format("YYYY-MM-DD HH:mm:ss");
 
-const optimizarAtencion = true;
+const optimizarAtencion = false;
 
 MonitorChanges = async(req, res) => {
     try {

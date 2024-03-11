@@ -11,6 +11,7 @@ NodeJS Express:
     * moment
     * mongodb
 Docker con docker-compose (Para instalar mongo)
+Generar documentos de prueba instalando extensión "mongodb" de vscode y ejecutando el archivo "fonasa\nosql\fonasa\nosql_queries\generar_documentos_prueba.mongodb.js"
 
 Ejecutar:
 npm run start en la raíz del proyecto.
