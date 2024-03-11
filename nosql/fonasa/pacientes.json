@@ -1,0 +1,27 @@
+[
+  {
+    "id_paciente": 1,
+    "historia_clinica": 1,
+    "prioridad": 3,
+    "riesgo": 10.5,
+    "estado_atencion": "En espera",
+    "atendido": false
+  },
+  {
+    "id_paciente": 2,
+    "historia_clinica": 2,
+    "prioridad": 5,
+    "riesgo": 14.5,
+    "estado_atencion": "Pendiente",
+    "atendido": false
+  },
+  {
+    "id_paciente": 3,
+    "historia_clinica": 3,
+    "tipo_paciente": "Anciano",
+    "prioridad": 4,
+    "riesgo": 18.2,
+    "estado_atencion": "Atendido",
+    "atendido": false
+  }
+]

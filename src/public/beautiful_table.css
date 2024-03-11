@@ -1,0 +1,20 @@
+.beautiful-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .beautiful-table th,
+  .beautiful-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .beautiful-table th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .beautiful-table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .beautiful-table tr:hover {background-color: #ddd;}

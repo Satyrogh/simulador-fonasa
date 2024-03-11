@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de pacientes de mayor riesgo</title>
+
+  <link rel="stylesheet" href="beautiful_table.css"></link>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.getElementById('listar_paciente_mayor_riesgo').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+    
+        var datosFormulario = new FormData(this);
+        for (let [key, value] of datosFormulario.entries()) {
+          console.log(`${key}: ${value}`);
+        }
+
+        const buscarParametros = new URLSearchParams();
+
+        for (const pair of datosFormulario) {
+          buscarParametros.append(pair[0], pair[1]);
+        }
+
+        fetch('/listar-paciente-mayor-riesgo', {
+            method: 'POST',
+            body: buscarParametros
+        })
+        .then(response => response.json())
+        .then(data => {
+          if(data.message){
+            document.getElementById('resultado').innerHTML = data.message;
+          }else{
+            let embellecer = `
+              <table id="dataTable" class="beautiful-table">
+                <thead>
+                  <tr>
+                    <th>ID Historia Clínica</th>
+                    <th>Tipo</th>
+                    <th>Prioridad</th>
+                    <th>Riesgo</th>
+                    <th>Estado Atención</th>
+                  </tr>
+                </thead>
+                <tbody>`;
+
+            data.forEach(item => {
+              embellecer += `
+                <tr>
+                  <td>${item.id_historia_clinica}</td>
+                  <td>${item.tipo}</td>
+                  <td>${item.prioridad}</td>
+                  <td>${item.riesgo}</td>
+                  <td>${item.estado_atencion}</td>
+                </tr>`;
+            });
+
+            embellecer += '</tbody></table>';
+            document.getElementById('resultado').innerHTML = embellecer;
+          }
+        })
+        .catch((error) => {
+            document.getElementById('resultado').innerHTML = error;
+            alert(error);
+            console.error(error, 'Error:', JSON.stringify(error));
+        });
+      });
+    });
+    
+  </script>
+</head>
+<body>
+  <h1>Buscador de pacientes de mayor riesgo</h1>
+  <form id="listar_paciente_mayor_riesgo">    
+    <div>
+      <label for="nombre">Número de historia clínica:</label>
+      <input type="text" name="id_historia_clinica" id="id_historia_clinica" required><br><br>
+      <button type="submit">Buscar pacientes</button>
+    </div>
+    <div id="resultado"></div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar Paciente</title>
+
+  <script>
+
+  </script>
+</head>
+<body>
+  <h1>Nuevo paciente</h1>
+  <form action="/ingresar-paciente" method="POST">    
+    <label for="nombre">Nombre del Paciente:</label>
+    <input type="text" name="nombre" id="nombre" required><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" name="edad" id="edad" required><br><br>
+
+    <label for="peso">Peso (kg):</label>
+    <input type="text" name="peso" id="peso" required><br><br>
+
+    <label for="estatura">Estatura (m):</label>
+    <input type="text" name="estatura" id="estatura" required><br><br>
+
+    <label for="fumador">¿Fumador?</label>
+    <input type="checkbox" name="fumador" id="fumador"><br><br>
+
+    <label for="años_fumador">Años como fumador (si aplica):</label>
+    <input type="number" name="años_fumador" id="años_fumador"><br><br>
+
+    <label for="dieta_asignada">¿Dieta asignada?</label>
+    <input type="checkbox" name="dieta_asignada" id="dieta_asignada"><br><br>
+    <button type="submit">Registrar Ingreso</button>
+  </form>
+</body>
+</html>

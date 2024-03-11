@@ -1,0 +1,12 @@
+#docker-compose.yml
+version: '3.9'
+
+services:
+  # MongoDB service (optional, adjust connection details as needed)
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+# Optional volume for persisted Node.js dependencies (recommended)
+volumes:
+  node_modules:

@@ -1,0 +1,35 @@
+[
+    {
+      "id_historia_clinica": 1,
+      "fecha_hora": "2024-03-06 5:00:00.000",
+      "nombre": "Juan Pérez",
+      "edad": 35,
+      "peso": 80,
+      "estatura": 1.80,
+      "fumador": true,
+      "años_fumador": 15,
+      "dieta_asignada": false
+    },
+    {
+      "id_historia_clinica": 2,
+      "fecha_hora": "2024-03-07 18:10:00",
+      "nombre": "María González",
+      "edad": 8,
+      "peso": 35,
+      "estatura": 1.39,
+      "fumador": false,
+      "años_fumador": 0,
+      "dieta_asignada": false
+    },
+    {
+      "id_historia_clinica": 3,
+      "fecha_hora": "2024-03-08 04:10:00",
+      "nombre": "Pedro Rodríguez",
+      "edad": 75,
+      "peso": 58,
+      "estatura": 1.62,
+      "fumador": true,
+      "años_fumador": 50,
+      "dieta_asignada": true
+    }
+  ]

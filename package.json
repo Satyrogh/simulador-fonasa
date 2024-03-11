@@ -1,0 +1,23 @@
+{
+  "name": "fonasa",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "docker-compose up -d && nodemon src/app.js --ignore '**/node_modules/**'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "moment": "^2.30.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^6.4.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
