@@ -213,7 +213,7 @@ PacienteMasAnciano = async(req, res) => {
     const db = await MongoConnect();
 
     const pacienteMasAnciano = await db.collection("pacientes").aggregate([
-        { $match: { "estado_atencion": {$in: ["En espera", "Pendiente"]} } },
+        { $match: { "estado_atencion": {$in: ["En espera"]} } },
         { $lookup: {
             from: "historias_clinicas",
             localField: "id_historia_clinica",
