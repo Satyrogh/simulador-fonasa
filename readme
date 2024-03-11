@@ -15,6 +15,7 @@ Generar documentos de prueba instalando extensión "mongodb" de vscode y ejecuta
 
 Ejecutar:
 npm run start en la raíz del proyecto.
+Acceder a la url expuesta en docker http://localhost:3001 en el navegador
 
 Notas y observaciones:
 Usar . como separador decimal
