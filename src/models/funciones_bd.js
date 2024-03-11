@@ -139,7 +139,6 @@ LiberarConsultas = async (req = null, res = null) => {
     }
 }
 
-
 ListarPacientesFumadoresUrgentes = async (req, res) => {
     const db = await MongoConnect();
 
@@ -214,7 +213,7 @@ PacienteMasAnciano = async(req, res) => {
     const db = await MongoConnect();
 
     const pacienteMasAnciano = await db.collection("pacientes").aggregate([
-        { $match: { "estado_atencion": "En espera" } },
+        { $match: { "estado_atencion": {$in: ["En espera", "Pendiente"]} } },
         { $lookup: {
             from: "historias_clinicas",
             localField: "id_historia_clinica",

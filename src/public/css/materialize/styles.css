@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fafafa;
+}
+h2 {
+    font-size: 20px !important;
+}
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.main-container {
+    width: 1115px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-navigation {
+    background-color: rgba(173, 216, 230, 0.4); 
+    box-shadow: 0px 3px 5px rgba(173, 216, 230, 0.4);
+    margin-bottom: 2em;
+}
+
+.header-container {
+    background-color: rgba(173, 216, 230, 0.4); 
+    box-shadow: 0px 3px 5px rgba(173, 216, 230, 0.4);
+    margin-bottom: 2em;
+    color: black !important;
+}
+.header-container li a {
+    color: black !important;
+}
+.header-container img {
+    width: 200px;
+    margin-top: -0.3em;
+    margin-left: -0.4em;
+}
+
+/* Página ingresar paciente */
+.form-card {
+    background: white;
+    padding: 20px;
+    border: 0.5px solid #c1c1c1;
+    border-radius: 11px;
+}
+.input-container {
+    margin-top: 2em !important;
+}
+.btn-submit-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 1em;
+}
+.btn-rounded {
+    border-radius: 8px !important;
+}
+.txt-btn {
+    text-transform: capitalize;
+}
+

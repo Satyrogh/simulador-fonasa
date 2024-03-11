@@ -1,0 +1,8 @@
+#divBotones{
+    display: flex;
+    justify-content: space-between;
+}
+
+#divAcciones{
+    margin: 5px 5vw;
+}

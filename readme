@@ -21,3 +21,4 @@ El paciente en espera es considerado el próximo que entrará a una consulta de 
 La prioridad de quién es el paciente que pasa a la sala de espera es determinado cuando la unidad que le corresponde se libera, es ahí cuando se verifica entre los pendientes quién es el próximo en espera según su prioridad y orden de llegada.
 Cuando una consulta se libera y hay un paciente de su unidad en espera, este es ingresado como "Atendido" y la consulta pasa a "Ocupada".
 Para activar la funcionalidad "Optimizar atención" se debe cambiar la variable optimizarAtencion de ./src/models/monitor_bd.js a true y volver a ejecutar el proyecto.
+Para hacer búsquedas utilizar criterios de pacientes "Pendiente" o "En espera"

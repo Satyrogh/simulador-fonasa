@@ -5,7 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscador de pacientes de mayor riesgo</title>
 
-  <link rel="stylesheet" href="beautiful_table.css"></link>
+  <link rel="stylesheet" href="/css/materialize/styles.css" />
+  <link rel="stylesheet" href="beautiful_table.css" />
+  <link rel="stylesheet" href="/css/styles.css"
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/materialize/materialize.min.css"
+    media="screen,projection"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <script src="/js/materialize/materialize.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       document.getElementById('listar_paciente_mayor_riesgo').addEventListener('submit', function(e) {
@@ -70,14 +89,27 @@
   </script>
 </head>
 <body>
-  <h1>Buscador de pacientes de mayor riesgo</h1>
-  <form id="listar_paciente_mayor_riesgo">    
-    <div>
-      <label for="nombre">Número de historia clínica:</label>
-      <input type="text" name="id_historia_clinica" id="id_historia_clinica" required><br><br>
-      <button type="submit">Buscar pacientes</button>
+  <header>
+    <div class="header-container">
+      <nav class="main-navigation">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo"
+            ><img src="img/fonasa.png" alt="Fonasa"
+          /></a>
+        </div>
+      </nav>
     </div>
-    <div id="resultado"></div>
-  </form>
+  </header>
+  <div class="main-container">
+    <h2 class="poppins-medium">Buscador de pacientes de mayor riesgo</h2>
+    <form id="listar_paciente_mayor_riesgo">    
+      <div id="divBotones">
+        <label for="nombre">Número de historia clínica:</label>
+        <input type="text" name="id_historia_clinica" id="id_historia_clinica" required><br><br>
+        <button class="btn waves-effect waves-light btn-rounded" type="submit">Buscar pacientes</button>
+      </div>
+      <div id="resultado"></div>
+    </form>
+  </div>
 </body>
 </html>

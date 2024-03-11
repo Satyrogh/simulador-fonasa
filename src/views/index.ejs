@@ -5,18 +5,56 @@
     <title>Fonasa Express</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="beautiful_table.css">
-
     <script src="js/index.js"></script>
+
+
+    <link rel="stylesheet" href="/css/materialize/styles.css" />
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    />
+    <link
+        type="text/css"
+        rel="stylesheet"
+        href="/css/materialize/materialize.min.css"
+        media="screen,projection"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+    />
+    <script src="/js/materialize/materialize.js"></script>
+
 </head>
 <body>
-    <h1>Fonasa</h1>
-    <div>
-        <a href="/ingresar-paciente">Ingresar Paciente</a>
-        <a href="/listar-paciente-mayor-riesgo">Listar pacientes de mayor riesgo.</a>
-        <button name="liberar_consultas" id="liberar_consultas">Liberar Consultas</button>
-        <button name="listar_pacientes_fumadores_urgentes" id="listar_pacientes_fumadores_urgentes">Listar pacientes fumadores urgentes.</button>
-        <button name="consulta_mas_pacientes_atendidos" id="consulta_mas_pacientes_atendidos">Consulta con más pacientes atendidos.</button>
-        <button name="paciente_mas_anciano" id="paciente_mas_anciano">Paciente más anciano en espera.</button>
+    <header>
+        <div class="header-container">
+            <nav class="main-navigation">
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo"
+                        ><img src="img/fonasa.png" alt="Fonasa"
+                    /></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="/ingresar-paciente">Ingresar paciente</a>
+                        </li>
+                        <li>
+                            <a href="/listar-paciente-mayor-riesgo">Pacientes de mayor riesgo</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="divAcciones">
+        <div id="divBotones">
+            <button class="btn waves-effect waves-light btn-rounded" name="liberar_consultas" id="liberar_consultas">Liberar Consultas</button>
+            <button class="btn waves-effect waves-light btn-rounded" name="listar_pacientes_fumadores_urgentes" id="listar_pacientes_fumadores_urgentes">Listar pacientes fumadores urgentes.</button>
+            <button class="btn waves-effect waves-light btn-rounded" name="consulta_mas_pacientes_atendidos" id="consulta_mas_pacientes_atendidos">Consulta con más pacientes atendidos.</button>
+            <button class="btn waves-effect waves-light btn-rounded" name="paciente_mas_anciano" id="paciente_mas_anciano">Paciente más anciano en espera.</button>
+        </div>
         <div id="resultado"></div>
     </div>
 </body>
